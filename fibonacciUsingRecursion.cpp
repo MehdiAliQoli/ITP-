@@ -5,7 +5,6 @@
 using namespace std;
 
 
-
 int fb(int b){
   
   if(b==0||b==1){
