@@ -40,6 +40,18 @@ current->next=temp;
 
 
 }
+
+void Delete(Node* &head , Node* top , int value){
+
+Node* current = top;
+for(int i=1; i<value-1;i++){
+    current = current->next;
+}
+Node* todelete = current->next;
+current->next=current->next->next;
+delete[] todelete;
+
+}
 void print(Node* top){
     Node* current = top;
     while(top!=nullptr){
@@ -63,6 +75,7 @@ insertat(head , top ,13 , 2 );
 insertat(head , top ,15 , 4 );
 insertat(head , top ,17 , 6 );
 insertat(head , top ,19 , 8 );
+    Delete(head , top ,2 );
    print(top);
  return 0;
 }
